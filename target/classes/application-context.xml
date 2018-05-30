@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-<bean id="helloWorld" class="com.zxd.spring.test.learning.HelloWorld">
-    <property name="message" value="Hello World" />
-</bean>
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-init-method="init" default-destroy-method="destory">
+    <!--如果你有太多具有相同名称的初始化或者销毁方法的 Bean，那么你不需要在每一个 bean
+    上声明初始化方法和销毁方法。框架使用 元素中的 default-init-method 和 default-destroy-method 属性提供了灵活地配置这种情况 -->
+    <bean id="helloWorld" class="com.zxd.spring.test.learning.HelloWorld" init-method="init" destroy-method="destory" scope="prototype">
+        <property name="message" value="Hello World" />
+    </bean>
+    <bean id="initBeanPostProcessor" class="com.zxd.spring.test.learning.InitBeanPostProcessor"></bean>
+
+    <bean id="helloWorldParent" class="com.zxd.spring.test.learning.HelloWorldParent">
+        <property name="message1" value="Hello world"/>
+        <property name="message2" value="Hello Second World!"/>
+    </bean>
+
+    <!--Bean 定义模板-->
+    <bean id="beanTeamplate" abstract="true">
+        <property name="message1" value="Hello World!"/>
+        <property name="message2" value="Hello Second World!"/>
+        <property name="message3" value="Namaste India!"/>
+    </bean>
+    <!--<bean id="helloIndia" class="com.zxd.spring.test.learning.HelloIndia" parent="beanTeamplate">-->
+    <bean id="helloIndia" class="com.zxd.spring.test.learning.HelloIndia" parent="helloWorldParent">
+        <property name="message1" value="Hello india"/>
+        <property name="message3" value="Hello third World!"/>
+    </bean>
 </beans>
