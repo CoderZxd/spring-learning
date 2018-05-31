@@ -25,5 +25,7 @@ default-init-method="init" default-destroy-method="destory">
     <!--<bean id="helloIndia" class="com.zxd.spring.test.learning.HelloIndia" parent="helloWorldParent">-->
         <property name="message1" value="Hello india"/>
         <property name="message3" value="Hello third World!"/>
+        <!--注入 null-->
+        <!--<property name="message4"><null/></property>-->
     </bean>
 </beans>
