@@ -9,7 +9,7 @@ package com.zxd.spring.test.learning.spell.check;
  * @Version 1.0
  * @create 2018-05-31 22:51
  **/
-public class TextEditor {
+public class TextEditor2 {
 
     private SpellChecker spellChecker;
 
@@ -18,13 +18,10 @@ public class TextEditor {
     }
 
     public void setSpellChecker(SpellChecker spellChecker) {
+        System.out.println("set spellChecker");
         this.spellChecker = spellChecker;
     }
 
-    public TextEditor(SpellChecker spellChecker, String value) {
-        System.out.println("Inside TextEditor constructor.parameter 2 ="+value );
-        this.spellChecker = spellChecker;
-    }
 
     public void spellCheck() {
         spellChecker.checkSpelling();

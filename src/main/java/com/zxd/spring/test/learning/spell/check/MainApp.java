@@ -17,5 +17,8 @@ public class MainApp {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Beans.xml");
         TextEditor textEditor = (TextEditor) applicationContext.getBean("textEditor");
         textEditor.spellCheck();
+        ApplicationContext applicationContext2 = new ClassPathXmlApplicationContext("BeansForSetter.xml");
+        TextEditor2 textEditor2 = (TextEditor2)applicationContext2.getBean("textEditor2");
+        textEditor2.spellCheck();
     }
 }
