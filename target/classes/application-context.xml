@@ -21,8 +21,8 @@ default-init-method="init" default-destroy-method="destory">
         <property name="message2" value="Hello Second World!"/>
         <property name="message3" value="Namaste India!"/>
     </bean>
-    <!--<bean id="helloIndia" class="com.zxd.spring.test.learning.HelloIndia" parent="beanTeamplate">-->
-    <bean id="helloIndia" class="com.zxd.spring.test.learning.HelloIndia" parent="helloWorldParent">
+    <bean id="helloIndia" class="com.zxd.spring.test.learning.HelloIndia" parent="beanTeamplate">
+    <!--<bean id="helloIndia" class="com.zxd.spring.test.learning.HelloIndia" parent="helloWorldParent">-->
         <property name="message1" value="Hello india"/>
         <property name="message3" value="Hello third World!"/>
     </bean>
