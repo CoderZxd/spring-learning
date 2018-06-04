@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Required;
  * @Title: ${FILE_NAME}
  * @Project: springlearning
  * @Package com.zxd.spring.test.learning.annotation.required
- * @description: TODO:一句话描述信息
+ * @description:
+ * @Required 注释应用于 bean 属性的 setter 方法，
+ * 它表明受影响的 bean 属性在配置时必须放在 XML 配置文件中，
+ * 否则容器就会抛出一个 BeanInitializationException 异常。
  * @Version 1.0
  * @create 2018-06-05 0:06
  **/
