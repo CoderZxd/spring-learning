@@ -13,10 +13,20 @@ import org.springframework.beans.factory.annotation.Autowired;
  **/
 public class TextEditor {
 
-    @Autowired
+    public TextEditor() {
+        System.out.println("Inside TextEditor constructor.by autowired");
+    }
+
+    @Autowired(required = true)  //3
+    public TextEditor(SpellChecker spellChecker ) {
+        System.out.println("Inside TextEditor constructor.by autowired 22222");
+        this.spellChecker = spellChecker;
+    }
+
+//    @Autowired  //2
     private SpellChecker spellChecker;
 
-//    @Autowired
+//    @Autowired  //1
 //    public void setSpellChecker( SpellChecker spellChecker ){
 //        this.spellChecker = spellChecker;
 //    }
