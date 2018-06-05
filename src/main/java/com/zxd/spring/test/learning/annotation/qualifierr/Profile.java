@@ -3,6 +3,8 @@ package com.zxd.spring.test.learning.annotation.qualifierr;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+import javax.annotation.PostConstruct;
+
 /**
  * @author CoderZZ
  * @Title: ${FILE_NAME}
@@ -17,6 +19,11 @@ public class Profile {
     @Autowired
     @Qualifier("student2")
     private Student student;
+
+    @PostConstruct
+    public void init(){
+        System.out.println("profile init......");
+    }
 
     public void prinntStudentInfo(){
         System.out.println("Name:"+student.getName());
