@@ -6,7 +6,7 @@
     <aop:config>
         <aop:aspect id="log" ref="logging">
             <aop:pointcut id="selectAll"
-                          expression="execution(* com.zxd.spring.test.learning.aspectj.*.*(..))"/>
+                          expression="execution(* com.zxd.spring.test.learning.aspectj.test.*.*(..))"/>
             <aop:before pointcut-ref="selectAll" method="beforeAdvice"/>
             <aop:after pointcut-ref="selectAll" method="afterAdvice"/>
             <aop:after-returning pointcut-ref="selectAll"
