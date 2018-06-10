@@ -1,4 +1,4 @@
-package com.zxd.spring.test.learning.aspectj.test;
+package com.zxd.spring.test.learning.aspectj.xml.test;
 
 /**
  * @author CoderZZ

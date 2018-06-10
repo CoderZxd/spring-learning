@@ -1,4 +1,4 @@
-package com.zxd.spring.test.learning.aspectj.test;
+package com.zxd.spring.test.learning.aspectj.xml.test;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -18,6 +18,6 @@ public class MainApp {
         Student student = (Student)applicationContext.getBean("student");
         student.getAge();
         student.getName();
-        student.printThrowException();
+//        student.printThrowException();
     }
 }
